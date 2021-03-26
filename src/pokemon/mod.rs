@@ -31,12 +31,3 @@ pub struct Pokemon {
 	pub moves: Vec<LearnableMove>,
 	
 }
-
-#[derive(Debug, Clone, Copy, PartialEq, Deserialize, Serialize)]
-pub enum Gender {
-	
-	None,
-	Male,
-	Female,
-	
-}

@@ -25,9 +25,3 @@ pub enum PokemonType {
 	Fairy,
 	
 }
-
-impl Default for PokemonType {
-    fn default() -> Self {
-        Self::Normal
-    }
-}

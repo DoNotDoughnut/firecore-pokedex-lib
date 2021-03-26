@@ -37,7 +37,7 @@ impl std::fmt::Display for Effective {
 impl PokemonType {
 
     pub const fn effective(&self, pokemon_type: PokemonType) -> f32 {
-        let effective = if self.supereffective(&pokemon_type) {
+        if self.supereffective(&pokemon_type) {
             Effective::SuperEffective
         } else if self.noteffective(&pokemon_type) {
             Effective::NotEffective
@@ -45,9 +45,7 @@ impl PokemonType {
             Effective::Ineffective
         } else {
             Effective::Effective
-        };
-        // macroquad::prelude::debug!("{:?} is {} on {:?}", self, effective, pokemon_type);
-        effective.multiplier()
+        }.multiplier()
     }
 
     pub const fn supereffective(&self, pokemon_type: &PokemonType) -> bool {

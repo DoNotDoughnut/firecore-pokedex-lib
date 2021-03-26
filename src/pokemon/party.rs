@@ -1,14 +1,16 @@
-use serde::{Deserialize, Serialize};
+// use serde::{Deserialize, Serialize};
 use smallvec::SmallVec;
 
-use crate::pokemon::instance::PokemonInstance;
+use super::instance::SavedPokemon;
 
-#[derive(Clone, Debug, Default, Serialize, Deserialize)]
-pub struct PokemonParty {
+pub type PokemonParty = SmallVec<[SavedPokemon; 6]>;
 
-	pub pokemon: SmallVec<[PokemonInstance; 6]>,
+// #[derive(Clone, Debug, Default, Serialize, Deserialize)]
+// pub struct PokemonParty {
 
-}
+	
+
+// }
 
 // impl PokemonParty {
 

@@ -2,7 +2,7 @@ use std::u32;
 
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Copy, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub struct Training {
 	
 	pub base_exp: u16,
