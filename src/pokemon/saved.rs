@@ -9,7 +9,7 @@ pub struct SavedPokemon {
 
     pub id: PokemonId,
 
-    pub data: PokemonInstance,
+    pub data: PokemonData,
 
     pub moves: Option<SerializableMoveSet>,
     
@@ -18,7 +18,7 @@ pub struct SavedPokemon {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct PokemonInstance {
+pub struct PokemonData {
 
     pub nickname: Option<String>,
     pub level: Level,

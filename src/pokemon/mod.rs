@@ -8,7 +8,7 @@ use data::training::Training;
 pub mod data;
 pub mod types;
 
-pub mod instance;
+pub mod saved;
 
 pub mod party;
 pub mod texture;

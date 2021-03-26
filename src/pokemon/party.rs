@@ -1,7 +1,7 @@
 // use serde::{Deserialize, Serialize};
 use smallvec::SmallVec;
 
-use super::instance::SavedPokemon;
+use super::saved::SavedPokemon;
 
 pub type PokemonParty = SmallVec<[SavedPokemon; 6]>;
 
