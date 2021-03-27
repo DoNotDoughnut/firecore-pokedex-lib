@@ -3,6 +3,7 @@ use serde::{Deserialize, Serialize};
 use super::pokemon::types::PokemonType;
 
 pub type MoveId = u16;
+pub type PP = u8;
 
 pub type SerializableMoveSet = smallvec::SmallVec<[SerializableMove; 4]>;
 
@@ -19,14 +20,14 @@ pub struct PokemonMove {
 
 	pub power: Option<u8>,
 	pub accuracy: Option<u8>,
-	pub pp: u8,
+	pub pp: PP,
 	
 }
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
 pub struct SerializableMove {
 	pub id: MoveId,
-	pub remaining_pp: u8,
+	pub pp: PP,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Deserialize, Serialize)]
