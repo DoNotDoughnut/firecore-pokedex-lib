@@ -16,6 +16,9 @@ pub mod texture;
 pub type PokemonId = u16;
 pub type Level = u8;
 pub type Stat = u8;
+pub type Experience = u32;
+pub type Friendship = u8;
+
 #[derive(Serialize, Deserialize)]
 pub struct Pokemon {
 
